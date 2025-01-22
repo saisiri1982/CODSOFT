@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double num1, num2;
+    char operation;
+    cout << "Basic arithmetic Operation Calculator" << endl;
+    cout << "Enter two numbers and choose an operation." << endl;
+    cout << "Available operations: (+) Addition, (-) Subtraction, (*) Multiplication, (/) Division" << endl;
+
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter second number: ";
+    cin >> num2;
+    cout << "Enter the operation (+, -, *, /): ";
+    cin >> operation;
+
+    if (operation == '+') {
+        cout << "Answer: " << num1 + num2 << endl;
+    }
+    else if (operation == '-') {
+        cout << "Answer: " << num1 - num2 << endl;
+    }
+    else if (operation == '*') {
+        cout << "Answer: " << num1 * num2 << endl;
+    }
+    else if (operation == '/') {
+        if (num2 != 0) {
+            cout << "Answer: " << num1 / num2 << endl;
+        } else {
+            cout << "Err:Division by zero is not allowed!" << endl;
+        }
+    } else {
+        cout << "Invalid operation! Please choose one of the following: (+, -, *, /)" << endl;
+    }
+
+    return 0;
+}
